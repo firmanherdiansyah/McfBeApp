@@ -17,7 +17,7 @@ namespace McfBeApp.Api.Controllers
             _dbContext = dbContext;
         }
 
-        [HttpGet(Name = "GetStorageLocation")]
+        [HttpGet]
         public IActionResult Get() =>
             new JsonResult(_dbContext.StorageLocation.ToList(), new JsonSerializerOptions { PropertyNamingPolicy = null });
     }
