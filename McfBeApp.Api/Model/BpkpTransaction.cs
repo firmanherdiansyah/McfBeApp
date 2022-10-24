@@ -11,13 +11,20 @@ namespace McfBeApp.Api.Model
         [MaxLength(100)]
         public string? AgrrementNumber { get; set; }
 
+        [Column(name: "branch_id", TypeName = "VARCHAR")]
+        [MaxLength(10)]
+        public string? BranchId { get; set; }
+
         [Column(name: "bpkb_number", TypeName = "VARCHAR")]
         [MaxLength(100)]
         public string? BpkbNumber { get; set; }
 
-
         [Column(name: "bpkp_date")]
         public DateTime BpkbDate { get; set; }
+
+        [Column(name: "faktur_no", TypeName = "VARCHAR")]
+        [MaxLength(100)]
+        public string? FakturNumber { get; set; }        
 
         [Column(name: "faktur_date")]
         public DateTime FakturDate { get; set; }

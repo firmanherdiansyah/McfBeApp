@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace McfBeApp.Api.Migrations
 {
     [DbContext(typeof(ApplicationDBContext))]
-    [Migration("20221024062719_init")]
+    [Migration("20221024074404_init")]
     partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -44,9 +44,19 @@ namespace McfBeApp.Api.Migrations
                         .HasColumnType("VARCHAR(100)")
                         .HasColumnName("bpkb_number");
 
+                    b.Property<string>("BranchId")
+                        .HasMaxLength(10)
+                        .HasColumnType("VARCHAR(10)")
+                        .HasColumnName("branch_id");
+
                     b.Property<DateTime>("FakturDate")
                         .HasColumnType("datetime2")
                         .HasColumnName("faktur_date");
+
+                    b.Property<string>("FakturNumber")
+                        .HasMaxLength(100)
+                        .HasColumnType("VARCHAR(100)")
+                        .HasColumnName("faktur_no");
 
                     b.Property<string>("LocationId")
                         .HasMaxLength(10)

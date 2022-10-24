@@ -27,7 +27,9 @@ namespace McfBeApp.Api.Migrations
                 {
                     agreement_number = table.Column<string>(type: "VARCHAR(100)", maxLength: 100, nullable: false),
                     bpkb_number = table.Column<string>(type: "VARCHAR(100)", maxLength: 100, nullable: true),
+                    branch_id = table.Column<string>(type: "VARCHAR(10)", maxLength: 10, nullable: true),
                     bpkp_date = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    faktur_no = table.Column<string>(type: "VARCHAR(100)", maxLength: 100, nullable: true),
                     faktur_date = table.Column<DateTime>(type: "datetime2", nullable: false),
                     location_id = table.Column<string>(type: "VARCHAR(10)", maxLength: 10, nullable: true),
                     police_no = table.Column<string>(type: "VARCHAR(20)", maxLength: 20, nullable: true),

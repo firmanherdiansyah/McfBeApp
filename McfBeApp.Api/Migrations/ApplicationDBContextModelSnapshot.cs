@@ -42,9 +42,19 @@ namespace McfBeApp.Api.Migrations
                         .HasColumnType("VARCHAR(100)")
                         .HasColumnName("bpkb_number");
 
+                    b.Property<string>("BranchId")
+                        .HasMaxLength(10)
+                        .HasColumnType("VARCHAR(10)")
+                        .HasColumnName("branch_id");
+
                     b.Property<DateTime>("FakturDate")
                         .HasColumnType("datetime2")
                         .HasColumnName("faktur_date");
+
+                    b.Property<string>("FakturNumber")
+                        .HasMaxLength(100)
+                        .HasColumnType("VARCHAR(100)")
+                        .HasColumnName("faktur_no");
 
                     b.Property<string>("LocationId")
                         .HasMaxLength(10)
